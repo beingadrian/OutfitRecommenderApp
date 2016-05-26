@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Recommender View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecommenderViewController" customModule="OutfitRecommender" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYu-sv-1Ie">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uFm-S9-for"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Recommend">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRecommendButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86W-sL-KQE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ECg-sM-ZnM">
+                                <rect key="frame" x="0.0" y="66" width="320" height="452"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtt-iv-8pg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g7q-EQ-C3b">
+                                        <rect key="frame" x="0.0" y="226" width="320" height="226"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g7q-EQ-C3b" firstAttribute="height" secondItem="xtt-iv-8pg" secondAttribute="height" id="vj9-Wd-Vdq"/>
+                                </constraints>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rZ-Yg-Ifb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="7X3-ZG-uIB"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87058823529411766" green="0.41568627450980394" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Formal" id="txg-DR-Y3I">
+                                        <barButtonItem key="leftBarButtonItem" title="Prev" id="OWS-Yl-vRY">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="onPrevEventTypeButtonTap:" destination="BYZ-38-t0r" id="DPE-9b-bMT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="atw-7p-EUg">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="onNextEventTypeButtonTap:" destination="BYZ-38-t0r" id="Bjg-JH-1ct"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2rZ-Yg-Ifb" secondAttribute="trailing" id="0Lx-FO-4fx"/>
+                            <constraint firstItem="2rZ-Yg-Ifb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7mm-v0-jUN"/>
+                            <constraint firstAttribute="trailing" secondItem="BYu-sv-1Ie" secondAttribute="trailing" id="9kd-Z8-Oma"/>
+                            <constraint firstItem="2rZ-Yg-Ifb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BJn-LE-U3j"/>
+                            <constraint firstAttribute="trailing" secondItem="ECg-sM-ZnM" secondAttribute="trailing" id="NDJ-mA-ySR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BYu-sv-1Ie" secondAttribute="bottom" id="PsA-Zq-NGG"/>
+                            <constraint firstItem="ECg-sM-ZnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cGf-1D-Sms"/>
+                            <constraint firstItem="BYu-sv-1Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmh-TB-qCw"/>
+                            <constraint firstItem="BYu-sv-1Ie" firstAttribute="top" secondItem="ECg-sM-ZnM" secondAttribute="bottom" id="jyh-5d-edE"/>
+                            <constraint firstItem="ECg-sM-ZnM" firstAttribute="top" secondItem="2rZ-Yg-Ifb" secondAttribute="bottom" id="qFD-q0-lWg"/>
+                            <constraint firstItem="ECg-sM-ZnM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wJi-xy-yaa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wJi-xy-yaa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bottomImageView" destination="g7q-EQ-C3b" id="Vy6-Ri-Ted"/>
+                        <outlet property="navBar" destination="2rZ-Yg-Ifb" id="q1M-DS-SyP"/>
+                        <outlet property="topImageView" destination="xtt-iv-8pg" id="xgw-na-7lY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="398"/>
+        </scene>
+    </scenes>
+</document>
