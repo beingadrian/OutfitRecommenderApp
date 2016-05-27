@@ -1,4 +1,4 @@
-# OutfitRecommenderApp
+# Outfit Recommender App
 An Xcode project meant to introduce some key basic concepts of iOS development.
 
 Check out the playground on the Outfit Recommender class itself: 
