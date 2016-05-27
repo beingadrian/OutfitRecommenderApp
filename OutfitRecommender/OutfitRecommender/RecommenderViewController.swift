@@ -12,7 +12,7 @@ class RecommenderViewController: UIViewController {
 
     // MARK: - Properties
     
-    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var eventTypeLabel: UILabel!
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var bottomImageView: UIImageView!
     
@@ -20,9 +20,9 @@ class RecommenderViewController: UIViewController {
     
     var eventTypes: [EventType] = [.Formal, .Casual, .Sports]
     var currentEventIndex = 0
-    var currentEventType: EventType = .Casual {
+    var currentEventType: EventType = .Formal {
         didSet {
-            navBar.topItem?.title = currentEventType.rawValue
+            eventTypeLabel.text = currentEventType.rawValue
             outfitRecommender.eventType = currentEventType
         }
     }
@@ -32,7 +32,13 @@ class RecommenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
         
+    }
+    
+    func setup() {
+        
+        eventTypeLabel.text = currentEventType.rawValue
         
     }
     
@@ -45,11 +51,11 @@ class RecommenderViewController: UIViewController {
         Swift.print(top, bottom)
         
         topImageView.image = UIImage(named: top)
-        bottomImageView.image = UIImage(named: top)
+        bottomImageView.image = UIImage(named: bottom)
         
     }
 
-    @IBAction func onNextEventTypeButtonTap(sender: UIBarButtonItem) {
+    @IBAction func onNextEventTypeButtonTap(sender: UIButton) {
         
         currentEventIndex += 1
         
@@ -60,7 +66,7 @@ class RecommenderViewController: UIViewController {
         
     }
     
-    @IBAction func onPrevEventTypeButtonTap(sender: UIBarButtonItem) {
+    @IBAction func onPrevEventTypeButtonTap(sender: UIButton) {
         
         currentEventIndex -= 1
         

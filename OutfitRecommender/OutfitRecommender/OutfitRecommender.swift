@@ -44,14 +44,14 @@ class OutfitRecommender {
         self.eventType = eventType
         
         // define tops
-        tops[.Sports] = ["Tank Top", "Tennis Shirt", "Jersey"]
-        tops[.Formal] = ["Blazer", "Vest", "Dress", "Dress Shirt", "Blouse"]
-        tops[.Casual] = ["T-Shirt", "Tank Top", "Hoodie", "Polo Shirt", "Crop Top"]
+        tops[.Sports] = ["Tank Top", "Jersey"]
+        tops[.Formal] = ["Vest", "Blouse"]
+        tops[.Casual] = ["T-Shirt", "Long Sleeve Shirt"]
         
         // define bottoms
-        bottoms[.Sports] = ["Soccer Shorts", "Tights", "Tennis Skirt"]
+        bottoms[.Sports] = ["Soccer Shorts", "Tennis Skirt"]
         bottoms[.Formal] = ["Long Pants", "Pencil Skirt"]
-        bottoms[.Casual] = ["Jeans", "Bermudas", "Denim Shorts", "Mini Skirt", "Midi Skirt"]
+        bottoms[.Casual] = ["Jeans", "Mini Skirt"]
         
     }
     
